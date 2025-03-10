@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+@source "../views";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.84);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.glass img {
+    border-radius: 8px 8px 0px 0px;
+    object-fit: cover;
+    padding: 0px;
+}
+/* bg-white bg-opacity-5 p-8 rounded-lg shadow-lg */
+.glassNav {
+    background: #023680;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+@media (width >= 48rem /* 768px */) {
+    .glassNav {
+        background: transparent;
+        border-radius: 0px;
+        box-shadow: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}

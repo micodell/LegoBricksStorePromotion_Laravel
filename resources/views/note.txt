@@ -1,0 +1,33 @@
+
+Opened: Wednesday, 5 March 2025, 12:00 AM
+Due: Wednesday, 12 March 2025, 12:00 AM
+
+Buatlah 1 website promosi dengan kriteria:
+
+    minimal 3 page
+        1. index (all products)
+        2. /product/{product_id}
+        3. /testimony
+    menggunakan laravel dan tailwind
+    ada gambar di dalam website
+    ada fitur katalog barang
+    website responsive (bisa tampilan mobile)
+    🫡menggunakan route dan view laravel (extend,yield)
+    tidak boleh memakai template jadi
+    tidak boleh menggunakan AI penuh
+    barang yang dipromosikan bebas tetapi sekreatif mungkin
+    barang tidak boleh sama antar mahasiswa
+
+Kriteria penilaian:
+
+    kelengkapan kriteria website
+    kreativitas
+
+silahkan upload project laravel yang folder vendornya sudah dihapus dahulu
+
+<!-- <a href="{{ route('product', ['product_id' => $product->id]) }}"> -->
+
+https://codepen.io/designcouch/pen/ExvwPY
+https://flowbite.com/docs/components/navbar/
+
+Seed database terlebih dahulu: php artisan db:seed --class=ProductSeeder
