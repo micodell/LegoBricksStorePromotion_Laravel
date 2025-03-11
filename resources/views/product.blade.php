@@ -10,8 +10,8 @@
                         <h3 class="text-lg sm:text-xl font-bold">Rp. {{ number_format($product->price,0,'.') }}</h3>
                     </span>
                     <span class="my-2">
-                        <div class="min-w-18 flex grow justify-center">
-                            <a href="{{ $product->link_toped }}" class="bg-green-500 hover:bg-green-600 px-1.5 sm:px-3 py-2 rounded-lg text-white font-semibold text-sm sm:text-lg">Buy Now</a>
+                        <div class="min-w-24 flex grow justify-center">
+                            <a href="{{ $product->link_toped }}" class="bg-green-500 hover:bg-green-600 px-1.5 sm:px-3 py-2 rounded-lg text-white font-semibold text-sm sm:text-base md:text-lg">Buy Now</a>
                         </div>
                     </span>
                 </span>
