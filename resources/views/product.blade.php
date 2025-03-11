@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $product->name }} | Lego bricks Store</title>
-    @vite('resources/css/app.css')
-</head>
-<body class="bg-gradient-to-b from-[#00337C] to-blue-400 w-screen min-h-screen overscroll-y-none">
-    @include('partials.header');
-    <div class="flex flex-col justify-center items-center">
+@extends('layouts.app')
+@section('content')
+    <div class="flex flex-col justify-center items-center my-12">
         <div class="glass w-xs sm:w-sm md:w-lg rounded-lg shadow-lg mb-4">
             <img src="{{ asset($product->image) }}" alt="" class="w-full object-cover">
             <div class="p-3">
@@ -18,16 +10,21 @@
                         <h3 class="text-lg sm:text-xl font-bold">Rp. {{ number_format($product->price,0,'.') }}</h3>
                     </span>
                     <span class="my-2">
-                        <a href="{{ $product->link_toped }}" class="bg-green-500 hover:bg-green-600 px-0 sm:px-3 py-2 rounded-lg text-white font-semibold text-sm sm:text-lg">Buy Now</a>
+                        <div class="min-w-18 flex grow justify-center">
+                            <a href="{{ $product->link_toped }}" class="bg-green-500 hover:bg-green-600 px-1.5 sm:px-3 py-2 rounded-lg text-white font-semibold text-sm sm:text-lg">Buy Now</a>
+                        </div>
                     </span>
                 </span>
                 <p class="text-base text-gray-500 mt-4 mb-2  border-t-2 border-slate-300"></p>
                 <p class=" text-justify text-gray-600">{{ $product->description }}</p>
             </div>
         </div>
-
-        <div class="bg-red-300 w-full h-96 p-4"></div>
     </div>
-    
-</body>
-</html>
+    <div class="flex justify-center">
+        <div class="flex items-center text-slate-200 w-10/12 py-2">
+            <h2 class="text-center text-base sm:text-2xl md:text-xl font-semibold my-6 sm:mt-2 md:my-2">OTHER PRODUCTS</h2>
+            <div class="grow bg-slate-200 h-[3px] ml-4"></div>
+        </div>
+    </div>
+    @include('partials.products', ['products' => $products])
+@endsection

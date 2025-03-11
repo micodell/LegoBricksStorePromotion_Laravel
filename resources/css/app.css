@@ -27,7 +27,7 @@
 }
 /* bg-white bg-opacity-5 p-8 rounded-lg shadow-lg */
 .glassNav {
-    background: #023680;
+    background: transparent;
     border-radius: 0px 0px 8px 8px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8px);
@@ -42,4 +42,28 @@
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
     }
+}
+
+.glassReview {
+    background: rgba(255, 255, 255, 0.84);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.glassReviewImg {
+    border-radius: 8px 8px 0px 0px;
+    object-fit: cover;
+    padding: 0px;
+}
+
+@keyframes sparkle {
+    0% { opacity: 0.8; transform: scale(1); filter: drop-shadow(0 0 2px #facc15); }
+    50% { opacity: 1; transform: scale(1.2); filter: drop-shadow(0 0 4px #facc15); }
+    100% { opacity: 0.8; transform: scale(1); filter: drop-shadow(0 0 2px #facc15); }
+}
+
+.sparkleStar {
+    animation: sparkle 2s infinite ease-in-out alternate;
 }

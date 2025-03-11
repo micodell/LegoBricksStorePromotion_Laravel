@@ -14,3 +14,7 @@ Route::get('/', [ProductsController::class, 'index'])->name('index');
 // });
 
 Route::get('/product/{id}', [ProductsController::class, 'read'])->name('product.read');
+
+Route::get('/review', function () {
+    return view('review');
+});

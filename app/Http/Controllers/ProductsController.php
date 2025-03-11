@@ -11,12 +11,18 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view('index', ['products'=>$products]);
+        return view('index', compact('products'));
     }
 
+    // public function read($id)
+    // {
+    //     $product = Product::findOrFail($id);
+    //     return view('product', compact('product'));
+    // }
     public function read($id)
     {
         $product = Product::findOrFail($id);
-        return view('product', compact('product'));
+        $products = Product::all();
+        return view('product', compact('product', 'products'));
     }
 }
