@@ -1,6 +1,6 @@
 <p>Project ini menggunakan database untuk menampilkan produk. Sehingga perlu dilakukan seeding database terlebih dahulu.</p>
 <p>Jalankan perintah ini:</p>
-```sh
+```
 php artisan db:seed --class=ProductSeeder
 
 <p>Kemudian untuk run applikasi, jalankan perintah ini:</p>
